@@ -1,0 +1,143 @@
+[
+    {
+        "name": "机器人1",
+        "md5": "ae05a2a1fc22ce5929b8a67f695bfc9c.png",
+        "type": "sprite",
+        "tags": [
+            "baseball",
+            "sports",
+            "ball",
+            "alex eben meyer"
+        ],
+        "info": [
+            0,
+            1,
+            1
+        ],
+        "json": {
+            "objName": "Baseball",
+            "sounds": [
+                {
+                    "soundName": "pop",
+                    "soundID": -1,
+                    "md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+                    "sampleCount": 258,
+                    "rate": 11025,
+                    "format": ""
+                }
+            ],
+            "costumes": [
+                {
+                    "costumeName": "机器人1",
+                    "baseLayerID": -1,
+                    "baseLayerMD5": "ae05a2a1fc22ce5929b8a67f695bfc9c.png",
+                    "bitmapResolution": 1,
+                    "rotationCenterX": 28,
+                    "rotationCenterY": 28
+                }
+            ],
+            "currentCostumeIndex": 0,
+            "scratchX": 173,
+            "scratchY": -89,
+            "scale": 1,
+            "direction": 90,
+            "rotationStyle": "normal",
+            "isDraggable": false,
+            "visible": true,
+            "spriteInfo": {}
+        }
+    },
+    {
+        "name": "机器人2",
+        "md5": "831ccd4741a7a56d85f6698a21f4ca69.png",
+        "type": "sprite",
+        "tags": [
+            "food",
+            "red",
+            "crunchy",
+            "fruit"
+        ],
+        "info": [
+            0,
+            1,
+            1
+        ],
+        "json": {
+            "objName": "机器人2",
+            "sounds": [
+                {
+                    "soundName": "pop",
+                    "soundID": -1,
+                    "md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+                    "sampleCount": 258,
+                    "rate": 11025,
+                    "format": ""
+                }
+            ],
+            "costumes": [
+                {
+                    "costumeName": "机器人2",
+                    "baseLayerID": -1,
+                    "baseLayerMD5": "831ccd4741a7a56d85f6698a21f4ca69.png",
+                    "bitmapResolution": 1,
+                    "rotationCenterX": 31,
+                    "rotationCenterY": 31
+                }
+            ],
+            "currentCostumeIndex": 0,
+            "scratchX": 93,
+            "scratchY": -23,
+            "scale": 1,
+            "direction": 90,
+            "rotationStyle": "normal",
+            "isDraggable": false,
+            "visible": true,
+            "spriteInfo": {}
+        }
+    },
+    {
+        "name": "机器人3",
+        "md5": "c56dcaa1fa4e3c9740142b93d5982893.png",
+        "type": "sprite",
+        "tags": [
+            "food"
+        ],
+        "info": [
+            0,
+            1,
+            1
+        ],
+        "json": {
+            "objName": "Fortune Cookie",
+            "sounds": [
+                {
+                    "soundName": "pop",
+                    "soundID": -1,
+                    "md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+                    "sampleCount": 258,
+                    "rate": 11025,
+                    "format": ""
+                }
+            ],
+            "costumes": [
+                {
+                    "costumeName": "fortune cookie",
+                    "baseLayerID": -1,
+                    "baseLayerMD5": "c56dcaa1fa4e3c9740142b93d5982893.png",
+                    "bitmapResolution": 2,
+                    "rotationCenterX": 60,
+                    "rotationCenterY": 62
+                }
+            ],
+            "currentCostumeIndex": 0,
+            "scratchX": -5,
+            "scratchY": -46,
+            "scale": 1,
+            "direction": 90,
+            "rotationStyle": "normal",
+            "isDraggable": false,
+            "visible": true,
+            "spriteInfo": {}
+        }
+    }  
+]

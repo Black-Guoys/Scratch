@@ -1,0 +1,42 @@
+/* tab切换 */
+* {margin: 0;padding: 0;}
+.tabchange-box{
+    padding: 0px 0px;
+    width: 100%;
+    height: 100%;
+}
+/* 切换 按钮*/
+.tabchange-box ul{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    height: 10%;
+}
+.tabchange-box  ul li{
+    text-align: center;
+    list-style-type:none;
+    width: 13%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+     justify-content: center;
+    }
+.active{
+    font-size: 18px;
+    width: 100px;border: 1px solid hsla(0, 0%, 0%, 0.15);
+    border-bottom: 1px solid hsla(215, 100%, 95%, 1);
+    margin-bottom: -1px;
+    background-color: white;
+}
+.tab-equipment{
+    width: 100%;
+    height: 100%;
+    border: 1px solid hsla(0, 0%, 0%, 0.15);
+}
+.add-button{
+     position: absolute;
+    bottom: 3.75rem;
+    right: 2rem;
+    }

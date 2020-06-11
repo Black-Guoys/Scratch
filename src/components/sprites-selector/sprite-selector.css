@@ -1,0 +1,169 @@
+@import "../../css/colors.css";
+@import "../../css/units.css";
+@import "../../css/z-index.css";
+
+.sprite-selector {
+    flex-grow: 1;
+    position: relative;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-right: calc($space / 2);
+    background-color: $ui-secondary;
+    border-top-right-radius: $space;
+    border-top-left-radius: $space;
+    border-color: $ui-black-transparent;
+    border-width: 1px;
+    border-style: solid;
+    border-bottom: 0;
+}
+
+.sprite-wrapper {
+    /*
+        Our goal is to fit sprites evenly in a row without leftover space.
+        Flexbox's `space between` property gets us close, but doesn't flow
+        well when the # of items per row > 1 and less than the max per row.
+
+        Solving by explicitly calc'ing the width of each sprite. Setting
+        `border-box` simplifies things, because content, padding and
+        border-width all are included in the width, leaving us only to subtract
+        the left + right margins.
+
+        @todo: make room for the scrollbar
+    */
+    box-sizing: border-box;
+
+    width: calc((100% / $sprites-per-row ) - $space);
+    min-width: 4rem;
+    min-height: 4rem; /* @todo: calc height same as width */
+    margin: calc($space / 2);
+}
+
+.sprite {
+    height: 100%;
+}
+
+
+.scroll-wrapper {float: left;
+    /*float: left;
+       Sets the sprite-selector items as a scrollable pane
+
+        @todo: Safari: pane doesn't stretch to fill height;
+        @todo: Adding `position: relative` still doesn't fix Safari scrolling pane, and
+              also introduces a new bug in Chrome when vertically resizing window down,
+              then back up, introduces white space in the outside the page container.
+    */
+    height: calc(100% - $sprite-info-height);
+    overflow-y: auto;width: 20%;
+}
+
+.items-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    padding-top: calc($space / 2);
+    padding-left: calc($space / 2);
+    padding-right: calc($space / 2);
+    padding-bottom: $space;
+}
+
+.add-button {
+    
+    bottom: 0.75rem;
+    left: 1.5rem;
+    z-index: $z-index-add-button;
+}
+.add-button{
+    position: absolute;
+  
+  
+   }
+.raised {
+    background-color: #8cbcff;
+    transition: all 0.25s ease;
+}
+
+.raised:hover {
+    background-color: #8cbcff;
+    transform: scale(1.05);
+}
+
+.raised:hover {
+    animation-name: wiggle;
+    animation-duration: 500ms;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    background-color: #8cbcff;
+}
+
+@keyframes wiggle {
+    0% {transform: rotate(3deg) scale(1.05);}
+    25% {transform: rotate(-3deg) scale(1.05);}
+    50% {transform: rotate(5deg) scale(1.05);}
+    75% {transform: rotate(-2deg) scale(1.05);}
+    100% {transform: rotate(0deg) scale(1.05);}
+}
+
+.receivedBlocks {
+    animation: glowing 250ms;
+}
+
+@keyframes glowing {
+    10% { box-shadow: 0 0 10px #7fff1e; }
+    90% { box-shadow: 0 0 10px #7fff1e; }
+    100% { box-shadow: none; }
+}
+
+.placeholder > .sprite {
+    background: black;
+    filter: opacity(15%) brightness(0%);
+}
+
+
+/* 右侧 */
+.tab-equipment-right{width:80%;height: 100%; background-color: white;float: right;border-radius: 5px;}
+/* .tab-role-role-left-extend{background-image: url('./3.png');width: 4.4rem;height: 3rem;position: absolute;margin-top: 41rem;margin-left: 2rem;} */
+
+
+
+
+
+
+.tab-equipment-right1{width: 80%;height: 100%;margin: auto; font-size: 15px;font-weight: bolder;}
+/* 操作台 */
+.operationtop{height: 10%;margin: auto;width: 100%;}
+.operationtop1{border-bottom: 1px solid hsla(215, 100%, 65%, 1);height: 70%;width: 90%;margin: auto;margin-top: 3.5%;}
+.operation-nav{height: 74%;width: 100%;}
+.operation-nav1,.operation-navthree1{width: 90%;height: 100%;}
+.operation-bottom{width: 100%;height: 13.8%;border-top: 1px solid  hsla(215, 100%, 65%, 1);}
+.operation-bottom span{font-size: 20px;margin-left: .7rem;}
+.operation-bottomright{border-left: 1px solid hsla(215, 100%, 65%, 1);width: 30%;height: 100%;float: right;margin-top: -4.6rem;}
+/* 上 */
+.operationtopone,.operationtoptwo{width: 35%;height: 65%; border: 1px solid hsla(215, 100%, 65%, 1);border-radius: 70px;background-color:hsla(215, 100%, 65%, 1);}
+.operationtoptwo{float: right;}
+.operationtopone{float: left;}
+.operationtoptwo:hover{box-shadow:rgb(134, 181, 248) 0px 0px 20px 10px}
+.operationtopone:hover{box-shadow:rgb(134, 181, 248) 0px 0px 20px 10px}
+/* 中 */
+.operation-navone>span{float: left;}
+.operation-navone{width: 100%;height: 17%;}
+.operation-navthree{width: 100%;height: 21%;}
+.operationnavone>div{height: 50%;width: 60%;float: right;}
+.operation-navtwo{height: 62%;}
+.operation-navtwo-left{width: 40%;height: 100%;float: left;}
+.operation-navtwo-left>div{height: 25%;display: flex;align-items: center; /*定义body的元素垂直居中*/justify-content: center;}
+.operation-navtwo-left>div>input{width: 50%;margin-left: 1rem; height: 60%;border-radius: 45px;text-align: center;border: 1px solid rgb(138, 137, 137);}
+/* 操作按钮 */
+.operation-navtwo-right{float: right;width: 60%;height: 100%;}
+.operation-navtwo-rightbutton{width: 70%;height: 100%;}
+/* .top,.bottom,.left,.right{width: 50%;height: 25%;border: 1px solid red;} */
+
+.operation-navthree1{display: flex;align-items: center; /*定义body的元素垂直居中*/justify-content: center;}
+/* 下 */
+.operation-navthree-left{display: block; width: 20px;height: 20px;border: 1px solid rgb(138, 137, 137);border-radius: 5px;float: left;}
+.operation-navthree-left1{width: 33%;float: left;}
+.operationnav1{margin: auto;}
+.operation-navthree-left2{float:left;margin-left: .5rem;font-weight: none !important;}
+.operation-navthree-right{width: 67%;float: right;border: 1px solid rgb(177, 174, 174);border-radius: 35px;}
+.operation-navthree-right-input,.operation-navthree-right-input1{width: 50%;border-radius: 35px;height: 100%;margin: auto;float: left;border: white;text-align: center;}
+.operation-navthree-right-input1{float: right;}
+.operation-navthree-right>input:hover{width: 50%;height: 100%;background-color:hsla(215, 100%, 65%, 1);border-radius: 35px;}
